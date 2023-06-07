@@ -5,3 +5,8 @@
 /graphics
 /images
 /resnet18_weights_best_acc.tar
+/results
+__pycache__/cli.cpython-38.pyc
+__pycache__/epoch.cpython-38.pyc
+__pycache__/utils.cpython-38.pyc
+.DS_Store
