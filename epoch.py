@@ -103,7 +103,6 @@ def val_epoch(model, val_loader, criteria, loss_val, acc_val, topk_acc_val, avgk
         for k in list_k:
             # Computes threshold for every k and count nb of correctly classifier examples in the avg-k sense (globally and for each class)
             lmbda_val[k] = 0.5 * (sorted_probas[n_val * k - 1] + sorted_probas[n_val * k])
-            print('AGASGASGASGASGASG',str(lmbda_val), str(sorted_probas),str(n_val))
             n_correct_avgk_val[k] += count_correct_avgk(probas=val_probas, labels=val_labels, lmbda=lmbda_val[k]).item()
             update_correct_per_class_avgk(val_probas, val_labels, class_acc_dict['class_avgk_acc'][k], lmbda_val[k])
 

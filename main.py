@@ -16,6 +16,7 @@ from utils import set_seed, load_model, save, get_model, update_optimizer, get_d
 from epoch import train_epoch, val_epoch, test_epoch
 from cli import add_all_parsers
 
+# list for create graphics
 arrval = []
 lossval = []
 arrtrain = []
@@ -36,7 +37,7 @@ def train(args):
         model.cuda()
         criteria.cuda()
 
-    optimizer = torch.optim.NAdam(model.parameters(), lr=0.001, betas=(0.9, 0.999), eps=1e-08, weight_decay=0, momentum_decay=0.004, foreach=None, differentiable=False)
+    optimizer = torch.optim.NAdam(model.parameters(), lr=0.0001, betas=(0.9, 0.999), eps=1e-08, weight_decay=0, momentum_decay=0.004, foreach=None, differentiable=False)
 
     # Containers for storing metrics over epochs
     loss_train, acc_train, topk_acc_train = [], [], []
