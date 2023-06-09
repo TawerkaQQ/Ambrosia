@@ -7,7 +7,7 @@ def add_all_parsers(parser):
     _add_model_parser(parser)
     _add_hardware_parser(parser)
     _add_misc_parser(parser)
-
+# comment
 
 def _add_loss_parser(parser):
     group_loss = parser.add_argument_group('Loss parameters')
